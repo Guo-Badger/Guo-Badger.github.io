@@ -1,0 +1,40 @@
+{
+    "key": "group_58121b4775d7c",
+    "title": "News Link",
+    "fields": [
+        {
+            "key": "field_58121c41f00cb",
+            "label": "Link to news from another site",
+            "name": "news_url",
+            "type": "url",
+            "instructions": "Copy\/paste the link from the article you wish to pull into your site. If available, the site will include the text from that page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1477582276
+}

@@ -1,0 +1,502 @@
+{
+    "key": "group_58d1a9f3cdd53",
+    "title": "Hero Content Area",
+    "fields": [
+        {
+            "key": "field_58e695e8ad64f",
+            "label": "Upper Content",
+            "name": "hero_content",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Upper Content",
+            "min": "",
+            "max": 1,
+            "layouts": [
+                {
+                    "key": "58e69371cf93d",
+                    "name": "hero_carousel",
+                    "label": "Hero Image\/Carousel",
+                    "display": "block",
+                    "sub_fields": [
+                          {
+                            "key": "field_5ab02827829e2",
+                            "label": "Hero Content Area",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "The hero content area is optional. If you add multiple images\/heroes, the heroes will be displayed as an interactive carousel. Each hero has multiple layout options. The Featured Content Inset and Headline options create an overlay that can contain text and a link (featured content only: optional inset photo). The link can go to an external URL or to an existing page or post. For the sake of consistency and usability, if you have a carousel, it is recommended that you link all heroes in the carousel or none.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+	                      {
+                            "key": "field_5ad66f5566ffc",
+                            "label": "Randomize Order",
+                            "name": "randomize_order",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Randomize the slide order",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },										
+                        {
+                            "key": "field_58e6960dad650",
+                            "label": "Hero Carousel Repeater",
+                            "name": "hero_carousel_repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_5743679337299",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Image\/Carousel",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5743679337299",
+                                    "label": "Hero Image",
+                                    "name": "hero_image",
+                                    "type": "image",
+                                    "instructions": "The Hero Content Area is 1600 pixels wide and 500 pixels in height.  We recommend using images that are cropped to this size for consistency.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "60",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "uw-hero",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "jpg,jpeg,png"
+                                },
+                                {
+                                    "key": "field_5812596ab53ag",
+                                    "label": "Hide this Hero?",
+                                    "name": "disable_this_hero",
+                                    "type": "true_false",
+                                    "instructions": "Hide this hero from displaying on your site (save it for the future).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "40",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "Hide",
+                                    "ui_off_text": "Show"
+                                },
+                                {
+                                    "key": "field_58110e0104c23",
+                                    "label": "Hero Layout",
+                                    "name": "hero_layout",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "60",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "inset": "Featured Content Inset",
+                                        "headline": "Headline",
+                                        "image-only": "Image Only"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "save_other_choice": 0,
+                                    "default_value": "image-only",
+                                    "layout": "vertical",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_57600a6bf9cc4",
+                                    "label": "Inset Image",
+                                    "name": "inset_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "inset"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "40",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "uw-2panel-slider",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_576009f0f9cc3",
+                                    "label": "Auto-fill inset from an existing page or post?",
+                                    "name": "use_post_object",
+                                    "type": "true_false",
+                                    "instructions": "Pull in the text from a page or post and link to it. You will need to fill in the excerpt on that post\/page.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "inset"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "headline"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "Auto-fill",
+                                    "ui_off_text": "Manual"
+                                },
+                                {
+                                    "key": "field_57600c47f9cc7",
+                                    "label": "Post or Page to Show",
+                                    "name": "inset_post_object",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "inset"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "headline"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [],
+                                    "taxonomy": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "object",
+                                    "ui": 1
+                                },
+                                {
+                                    "key": "field_581226d831a34",
+                                    "label": "Headline Text",
+                                    "name": "inset_headline",
+                                    "type": "textarea",
+                                    "instructions": "Limited to 155 characters",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "headline"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": 155,
+                                    "rows": 5,
+                                    "new_lines": "wpautop"
+                                },
+                                {
+                                    "key": "field_57600acaf9cc5",
+                                    "label": "Inset Text",
+                                    "name": "inset_text",
+                                    "type": "textarea",
+                                    "instructions": "Limited to 155 characters",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "inset"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": 155,
+                                    "rows": 5,
+                                    "new_lines": "wpautop"
+                                },
+                                {
+                                    "key": "field_58acc21d13a76",
+                                    "label": "Add a link?",
+                                    "name": "add_a_link",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "inset"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "headline"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "40",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "Link",
+                                    "ui_off_text": "No link"
+                                },
+                                {
+                                    "key": "field_58acc13d13a6g",
+                                    "label": "Link Title\/Call to Action",
+                                    "name": "inset_link_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "inset"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "field": "field_58acc21d13a76",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "headline"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "field": "field_58acc21d13a76",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "60",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_57600c08f9cc6",
+                                    "label": "External URL",
+                                    "name": "inset_link",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "inset"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "field": "field_58acc21d13a76",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "field": "field_58110e0104c23",
+                                                "operator": "==",
+                                                "value": "headline"
+                                            },
+                                            {
+                                                "field": "field_576009f0f9cc3",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "field": "field_58acc21d13a76",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1491581399
+}

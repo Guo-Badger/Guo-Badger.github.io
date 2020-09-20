@@ -1,0 +1,66 @@
+{
+    "key": "group_56a7891a30712",
+    "title": "Documents\/Policies",
+    "fields": [
+        {
+            "key": "field_56a789563d60e",
+            "label": "Document Summary",
+            "name": "document_summary",
+            "type": "textarea",
+            "instructions": "This is a summary of the contents of the document. It allows users to understand what the document\/policy contains without having to download and open the document.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56a78a453d610",
+            "label": "Document File",
+            "name": "document_file",
+            "type": "file",
+            "instructions": "Optional: attach the document to the page. Site users will be able to click on the file and download it to their computer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "uw_documents"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "comments"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1472755497
+}
